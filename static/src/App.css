@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.backgroundContainer {
+  background-color: #FFFAFA;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 15% auto 50% auto 15%;
+  grid-template-rows: 5% auto 5%;
+}
+
+.myIcon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 70px;
+  width: 70px;
+}
+
+.cardContainer {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  background-color: #FFFAFA;
+  grid-template-columns: 15% auto 15px auto 15%;
+  grid-template-rows: 15px auto auto 15px auto auto 15px;
+  height: auto;
+  width: auto;
+}
+
+.cardOne {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  height: auto;
+  width: auto;
+  background-color: #FAF0E6;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.cardOne:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.cardTwo {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  height: auto;
+  width: auto;
+  background-color: #FAF0E6;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.cardTwo:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.cardThree {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  height: auto;
+  width: auto;
+  background-color: #FAF0E6;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.cardThree:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.cardFour {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  height: auto;
+  width: auto;
+  background-color: #FAF0E6;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.cardFour:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.myIcons {
+  position: relative;
+  margin-top: 15%;
+  top: auto;
+  text-align: center;
+  color: black;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 1000px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .backgroundContainer {
+      background-color: #FFFAFA;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 5% auto 5%;
+      grid-template-rows: 1px auto 1px;
+    }
+
+    .myIcon {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 70px;
+      width: 70px;
+    }
+
+    .cardContainer {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      display: grid;
+      background-color: #FFFAFA;
+      grid-template-columns: 22% auto 22%;
+      grid-template-rows: 1px auto auto auto auto 1px;
+      grid-row-gap: 30px;
+      height: auto;
+      width: auto;
+    }
+
+    .cardOne {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      height: auto;
+      width: auto;
+      background-color: #FAF0E6;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+
+    .cardOne:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    .cardTwo {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      height: auto;
+      width: auto;
+      background-color: #FAF0E6;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+    .cardTwo:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    .cardThree {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      height: auto;
+      width: auto;
+      background-color: #FAF0E6;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+    .cardThree:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    .cardFour {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 5;
+      grid-row-end: 6;
+      height: auto;
+      width: auto;
+      background-color: #FAF0E6;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+    .cardFour:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    .myIcons {
+      font-size: 10px;
+      position: relative;
+      margin-top: 15%;
+      top: auto;
+      text-align: center;
+      color: black;
+    }
+
+  }
