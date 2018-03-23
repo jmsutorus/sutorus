@@ -9,7 +9,7 @@ export default class Projects extends React.Component {
       <div>
         <NavLink to="/projects/calculator" className="nav">Calculator</NavLink>
         Chess
-        <NavLink to="/projects/twofoureight" className="nav">2048</NavLink>
+        <NavLink to="/projects/react2048" className="nav">React2048</NavLink>
         <NavLink to="/projects/tictactoe" className="nav">Tictactoe</NavLink>
         recall
       </div>

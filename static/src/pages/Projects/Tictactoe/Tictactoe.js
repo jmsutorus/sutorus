@@ -128,14 +128,14 @@ export default class Tictactoe extends React.Component {
   }
   render() {
     return (
-      <div>
-        <h1 class="header">
+      <div class="ttt-container">
+        <h1 class="ttt-header">
           Welcome to Tic Tac Toe
         </h1>
-        <div class="player-turn">
+        <div class="ttt-player-turn">
           Player {this.state.currentTurn} turn
         </div>
-        <div class="grid-container">
+        <div class="ttt-grid-container">
           <Button currentNumber={this.state.boardValues[0]} onClick={() => {this.onButtonClick(0)}} />
           <Button currentNumber={this.state.boardValues[1]} onClick={() => {this.onButtonClick(1)}} />
           <Button currentNumber={this.state.boardValues[2]} onClick={() => {this.onButtonClick(2)}} />
