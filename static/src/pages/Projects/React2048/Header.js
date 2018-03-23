@@ -2,12 +2,16 @@ import React from 'react'
 export default class Header extends React.Component {
     render() {
         return (
+          <div>
             <div className='header'>
-                <h1 className="title">2048</h1>
+                <h1 className="title">React 2048</h1>
                 <ToolsBar gameData={this.props.gameData}/>
-                <div className='playAgain' onClick={this.props.handleNewGame}>new game</div>
-                <CellSelect gameData={this.props.gameData} handleNewGame={this.props.handleNewGame} />
-             </div>
+            </div>
+            <div className='bottom-row'>
+              <div className='playAgain' onClick={this.props.handleNewGame}>new game</div>
+              <CellSelect gameData={this.props.gameData} handleNewGame={this.props.handleNewGame} />
+            </div>
+          </div>
         )
     }
 }

@@ -7,7 +7,16 @@ html {
 
 .header {
     margin-top: 20px;
-    height: 125px;
+    height: 65px;
+    margin-left: 5px;
+}
+.bottom-row {
+  margin-top: 5px;
+  margin-left: 5px;
+  display: inline-block;
+  height: 65px;
+  width: 100%;
+  margin-bottom: 0px;
 }
 
 .grid-container {
@@ -54,7 +63,7 @@ html {
 }
 
 .title {
-    color: rgba(235, 67, 35, 0.75);
+    color: #36454f;
     font-size: 36px;
     float: left;
     margin-top: 0;
@@ -70,16 +79,16 @@ html {
 .nowScore,
 .bestScore {
     position: relative;
+    margin-right: 5px;
     display: inline-block;
-    background: rgba(37, 172, 162, 0.75);
-    padding: 15px 40px;
+    background: #36454f;
+    padding: 15px 20px;
     font-size: 25px;
     height: 55px;
     line-height: 47px;
     font-weight: bold;
     border-radius: 3px;
     color: white;
-    margin-top: 8px;
     text-align: center;
 }
 
@@ -120,7 +129,7 @@ html {
     vertical-align: middle;
     border-radius: 7px;
     color: #fff;
-    background-color: #badad9;
+    background-color: #FAF0E6;
 }
 
 .num-cell {
@@ -144,7 +153,7 @@ html {
     width: 450px;
     height: 450px;
     padding: 5px;
-    background-color: #cce4db;
+    background-color: #FFFAFA;
     border-radius: 7px;
     outline: none;
     position: relative;
@@ -348,38 +357,32 @@ html {
 }
 
 .playAgain {
-    position: relative;
-    text-decoration: none !important;
-    display: inline-block;
-    top: 70px;
     float: left;
+    margin-top: 0;
     cursor: pointer;
     padding: 10px;
-    margin-bottom: 20px;
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    background-image: url('./button_bg.png');
-    background-position: bottom left, top right, 0 0, 0 0;
     font-size: 24px;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
     -moz-box-shadow: 0 0 1px #fff inset;
     -webkit-box-shadow: 0 0 1px #fff inset;
-    box-shadow: 0 0 1px #fff inset;
     -webkit-transition: background-position 1s;
     -moz-transition: background-position 1s;
-    transition: background-position 1s;
-    color: #fff;
-    background-image: url('./button_bg.png'), url('./button_bg.png'), -moz-radial-gradient( center bottom, circle, rgba(89, 208, 244, 1) 0, rgba(89, 208, 244, 0) 100px), -moz-linear-gradient(#4fbbf7, #3faeeb);
-    background-image: url('./button_bg.png'), url('./button_bg.png'), -webkit-gradient( radial, 50% 100%, 0, 50% 100%, 100, from(#47c4f0), to(#9fe3fd)), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#47c4f0), to(#9fe3fd));
+    transition: background 0.8s;
+    transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+    color: #36454f;
+    background-color: #FAF0E6;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .playAgain:hover {
-    background-image: url('./button_bg.png'), url('./button_bg.png'), -moz-radial-gradient( center bottom, circle, rgba(109, 217, 250, 1) 0, rgba(109, 217, 250, 0) 100px), -moz-linear-gradient(#63c7fe, #58bef7);
-    background-image: url('./button_bg.png'), url('./button_bg.png'), -webkit-gradient( radial, 50% 100%, 0, 50% 100%, 100, from(rgba(109, 217, 250, 1)), to(rgba(109, 217, 250, 0))), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#63c7fe), to(#58bef7));
-    background-position: top left;
-    background-position: top left, bottom right, 0 0, 0 0;
+  background: #FAF0E6 radial-gradient(circle, transparent 1%, #FAF0E6 1%) center/15000%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.playAgain:active {
+  background-size: 100%;
+  transition: background 0s;
 }
 
 select.select-cell-num {
@@ -401,7 +404,7 @@ select.select-cell-num {
     font-family: Arial, Calibri, Tahoma, Verdana;
     font-size: 18px;
     font-weight: 500;
-    color: #f56a81;
+    color: #36454f;
     cursor: pointer;
     outline: none;
 }
@@ -429,8 +432,7 @@ label.lbl-select {
     position: relative;
     display: inline-block;
     float: right;
-    top: 60px;
-    margin-top: 15px;
+    margin-right: 10px;
 }
 
 label.lbl-select::after {
@@ -443,9 +445,19 @@ label.lbl-select::after {
     line-height: 40px;
     vertical-align: middle;
     text-align: center;
-    color: rgba(235, 67, 35, 0.75);
+    color: #36454f;
     -moz-border-radius: 0 6px 6px 0;
     -webkit-border-radius: 0 6px 6px 0;
     border-radius: 0 6px 6px 0;
     pointer-events: none;
 }
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 1000px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+
+
+
+  }

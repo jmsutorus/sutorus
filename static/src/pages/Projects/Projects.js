@@ -11,6 +11,7 @@ export default class Projects extends React.Component {
         Chess
         <NavLink to="/projects/react2048" className="nav">React2048</NavLink>
         <NavLink to="/projects/tictactoe" className="nav">Tictactoe</NavLink>
+        <NavLink to="/projects/animations" className="nav">Animations</NavLink>
         recall
       </div>
     );
