@@ -29,9 +29,10 @@ export default class RecordPlayer extends React.Component {
       return (
           <div className={"record-player-"+this.state.active}>
             <div class={"song-container-"+this.state.active}>
-              <div class={"artist-title-"+this.state.active}></div>
-              <div class={"song-title-"+this.state.active}></div>
+              <div class={"artist-title-"+this.state.active}>Tyler, the Creator</div>
+              <div class={"song-title-"+this.state.active}>Gardenshed</div>
               <div class={"prgoress-bar-"+this.state.active}></div>
+              <div class={"inner-prgoress-bar-"+this.state.active}></div>
             </div>
             <div class={"button-container-"+this.state.active}>
               <div class={"back-button-"+this.state.active} onClick={() => {this.playClick()}}>
