@@ -1,0 +1,8 @@
+.search-icon {
+  display: flex;
+}
+.box-style {
+  background-color: white;
+  height: auto;
+  transition: all 1s;
+}

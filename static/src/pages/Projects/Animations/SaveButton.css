@@ -1,0 +1,21 @@
+.save-button-save {
+  background-color: #5cb85c;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .25s
+}
+.save-button-save:hover {
+  background-color: green;
+}
+.save-button-loading {
+  background-color: #CCFFCC;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .25s
+}
+.save-text {
+  color: white;
+  font-size: 25px;
+  float: right;
+  margin-right: 10px;
+}
