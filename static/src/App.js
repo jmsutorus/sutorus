@@ -8,6 +8,12 @@ class App extends Component {
   };
   render() {
     return (
+      <div>
+        <div className="myName-app">
+          <div className="joseph-app">
+            Joseph Sutorus
+          </div>
+        </div>
       <div className="backgroundContainer">
         <div className="cardContainer">
             <NavLink to="/about" onClick={this.aboutTransition} className="cardOne">
@@ -32,6 +38,7 @@ class App extends Component {
             </NavLink>
         </div>
       </div>
+    </div>
     );
   }
 }
