@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {  Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class App extends Component {
   aboutTransition = () => {
@@ -8,36 +8,27 @@ class App extends Component {
   };
   render() {
     return (
-      <div>
-        <div className="myName-app">
-          <div className="joseph-app">
-            Joseph Sutorus
+      <div className="home-page">
+        <div className="topbar">
+          <div className="icon-wrapper">
+            <div>Icon</div>
+          </div>
+          <div className="links-wrapper">
+            <NavLink to="/about" className="link"
+            onClick={this.aboutTransition}>
+              <div>Profile</div>
+            </NavLink>
+            <NavLink to="/about" className="link"
+            onClick={this.aboutTransition}>
+              <div>Work</div>
+            </NavLink>
+            <NavLink to="/about" className="link"
+            onClick={this.aboutTransition}>
+              <div>Contact</div>
+            </NavLink>
           </div>
         </div>
-      <div className="backgroundContainer">
-        <div className="cardContainer">
-            <NavLink to="/about" onClick={this.aboutTransition} className="cardOne">
-              <div className="myIcons">
-                <i class="fas fa-user fa-10x"></i>
-              </div>
-            </NavLink>
-            <NavLink to="/projects" className="cardTwo">
-              <div className="myIcons">
-                <i class="fas fa-code fa-10x"></i>
-              </div>
-            </NavLink>
-            <NavLink to="/design" className="cardThree">
-              <div className="myIcons">
-                <i class="fas fa-coffee fa-10x"></i>
-              </div>
-            </NavLink>
-            <NavLink to="/projects" className="cardFour">
-              <div className="myIcons">
-                <i class="fas fa-book fa-10x"></i>
-              </div>
-            </NavLink>
-        </div>
-      </div>
+        <div className="body">body</div>
     </div>
     );
   }

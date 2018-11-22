@@ -17,13 +17,13 @@ export default class RecordPlayer extends React.Component {
       console.log(this.state.active);
   };
   backClick() {
-    this.toggleClass;
+    // this.toggleClass;
   };
   playClick() {
-    this.toggleClass;
+    // this.toggleClass;
   };
   forwardClick() {
-    this.toggleClass;
+    // this.toggleClass;
   };
   render() {
       return (
