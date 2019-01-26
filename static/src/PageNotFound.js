@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 import { NavLink } from 'react-router-dom';
 
-class App extends Component {
+class PageNotFound extends Component {
 
   constructor(props) {
     super(props);
@@ -13,10 +12,10 @@ class App extends Component {
   render() {
     return (
     <div className="home-page">
-      What Up
+      404 PageNotFound
     </div>
     );
   }
 }
 
-export default App;
+export default PageNotFound;
