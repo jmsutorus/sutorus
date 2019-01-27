@@ -1,0 +1,17 @@
+.photos-page {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+.photos-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.photo-preview {
+    margin: 3px;
+}
+.photo-text {
+    font-size: 12px;
+}

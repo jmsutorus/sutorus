@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ProjectsHome.css';
-import { NavLink } from 'react-router-dom';
 import FindPI from '../Numbers/FindPI/FindPI';
 import FindE from '../Numbers/FindE/FindE';
 import Fibo from '../Numbers/Fibo/Fibo';
@@ -10,7 +9,6 @@ import TileCost from '../Numbers/TileCost/TileCost';
 import MortgageCalc from '../Numbers/MortgageCalc/MortgageCalc';
 import ChangeReturn from '../Numbers/ChangeReturn/ChangeReturn';
 import BinaryToDecimal from '../Numbers/BinaryToDecimal/BinaryToDecimal';
-import Calculator from '../Numbers/Calculator/Calculator';
 import AlarmClock from '../Numbers/AlarmClock/AlarmClock';
 import CoinFlip from '../Numbers/CoinFlipSimulation/CoinFlipSimulation';
 import CreditCardValidator from '../Numbers/CreditCardValidator/CreditCardValidator';
@@ -53,7 +51,6 @@ class ProjectsHome extends Component {
       <FactorialFinder></FactorialFinder>
       <FastExponentiation></FastExponentiation>
 
-      <Calculator></Calculator>
       <AlarmClock></AlarmClock>
       <DistanceBetweenCities></DistanceBetweenCities>
 
