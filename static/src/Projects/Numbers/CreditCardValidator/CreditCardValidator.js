@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../FindPI/FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 /*
 Takes in a credit card number from a common credit card vendor

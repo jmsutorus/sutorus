@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../FindPI/FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 /*
 Create an application which allows you to draw pictures, write notes and use various colors to flesh out ideas for projects.

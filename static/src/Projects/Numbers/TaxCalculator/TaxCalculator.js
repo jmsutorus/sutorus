@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../FindPI/FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 /*
 Asks the user to enter a cost and either a country or state tax.

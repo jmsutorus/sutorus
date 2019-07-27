@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../FindPI/FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 /*
  A simple clock where it plays a sound after X number of minutes/seconds or at a particular time.

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../FindPI/FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 /*
 Enter a string and the program counts the number of vowels in the text.

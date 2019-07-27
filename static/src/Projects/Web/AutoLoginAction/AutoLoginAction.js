@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../FindPI/FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 /*
 Make an application which logs into a given site on a schedule and invokes a certain action and then logs out.

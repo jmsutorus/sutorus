@@ -33,7 +33,7 @@ class Calculator extends Component {
   }
 
   handleKeyPress(e) {
-    if (e.key == 'Enter'){
+    if (e.key === 'Enter'){
       this.handleSubmit();
     }
   }
@@ -64,23 +64,6 @@ class Calculator extends Component {
     </div>
     );
   }
-}
-
-function Row(props) {
-  return (
-    <div className="row">
-      <Button value={props.c1} addInput={() => props.addInput(props.c1)}></Button>
-      <Button value={props.c2} addInput={() => props.addInput(props.c2)}></Button>
-      <Button value={props.c3} addInput={() => props.addInput(props.c3)}></Button>
-      <Button value={props.c4} addInput={() => props.addInput(props.c4)}></Button>
-    </div>
-  );
-}
-
-function Button(props) {
-  return (
-    <button className="calc-button" onClick={() => {props.addInput(props.value)}}>{props.value}</button>
-  );
 }
 
 function peek(array) {
@@ -130,12 +113,9 @@ function associativity(token) {
 
 function determineOutput(text) {
   // tokens
-  console.log(text);
   let tokens = tokenize(text);
-  console.log(tokens);
   // parse to RPN
   let queue = parse(tokens);
-  console.log(queue);
   // find the answer
   let output = calculate(queue);
   return output;
@@ -212,7 +192,6 @@ function tokenize(input) {
           }
           tIndex++;
         } else {
-          console.log(input[i]);
           if (isNaN()) {
             tokens[tIndex].value += input[i];
             if (tokens[tIndex].value === 'abs') {
@@ -235,7 +214,6 @@ function parse(tokens) {
   let queue = [];
   let stack = [];
   for (let i = 0; i < tokens.length; i++) {
-    console.log(tokens[i]);
     if (tokens[i] !== null) {
       if (tokens[i].type === 'Literal') {
         queue.push(tokens[i]);
@@ -264,8 +242,6 @@ function parse(tokens) {
         stack.push(tokens[i]);
       }
       else if (tokens[i].type === 'Right Parenthesis') {
-        console.log(tokens[i]);
-        console.log(stack);
         while ((peek(stack) && (peek(stack).type === "Operator") 
         //o1 is left-associative and its precedence is less than or equal to that of o2, or
         && ((associativity(tokens[i]) === "left" && precedence(tokens[i]) <= precedence(peek(stack)))
@@ -291,45 +267,34 @@ function calculate(queue) {
   let rpn = queue;
   let index = 0;
   while (rpn.length > 1 && rpn[index]) {
-    console.log(rpn[index]);
     let inter = 0;
     if (rpn[index].type === 'Operator' || rpn[index].type === 'Function') {
       switch (rpn[index].value) {
         case '*': {
-          console.log(rpn[index-2].value + ' * ' + rpn[index-1].value);
           inter = (rpn[index-2].value * rpn[index-1].value);
           break;
         }
         case '+': {
-          console.log(rpn[index-2].value + ' + ' + rpn[index-1].value);
           inter = (rpn[index-2].value + rpn[index-1].value);
           break;
         }
         case '/': {
-          console.log(rpn[index-2].value + ' / ' + rpn[index-1].value);
           inter = (rpn[index-2].value / rpn[index-1].value);
           break;
         }
         case '^': {
-          console.log(rpn[index-2].value + ' ^ ' + rpn[index-1].value);
           inter = Math.pow(rpn[index-2].value, rpn[index-1].value);
           break;
         }
         case 'abs': {
-          console.log(rpn[index-1].value);
           inter = Math.abs(rpn[index-1].value);
-          console.log(inter);
           break;
         }
         case 'pow': {
-          console.log(rpn[index-1].value);
           inter = Math.pow(rpn[index-2].value, rpn[index-1].value);
-          console.log(inter);
           break;
         }
         default: {
-          console.log(rpn[index-2].value + ' - ' + rpn[index-1].value);
-          console.log(rpn[index-2].value - rpn[index-1].value);
           inter = (rpn[index-2].value - rpn[index-1].value);
         }
       }
@@ -346,11 +311,3 @@ function calculate(queue) {
 }
 
 export default Calculator;
-
-{/* <div>
-        <Row c1="(" c2=")" c3="%" c4="AC" addInput={this.handleChange}/>
-        <Row c1="7" c2="8" c3="9" c4="/" addInput={this.handleChange}/>
-        <Row c1="4" c2="5" c3="6" c4="*" addInput={this.handleChange}/>
-        <Row c1="1" c2="2" c3="3" c4="-" addInput={this.handleChange}/>
-        <Row c1="0" c2="." c3="=" c4="+" addInput={this.handleChange}/>
-      </div> */}

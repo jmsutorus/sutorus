@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 class FindPI extends Component {
 

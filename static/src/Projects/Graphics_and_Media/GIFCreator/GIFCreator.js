@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../FindPI/FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 /*
 A program that puts together multiple images (PNGs, JPGs, TIFFs) to make a smooth GIF that can be exported.

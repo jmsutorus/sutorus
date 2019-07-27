@@ -1,67 +1,73 @@
 import React, { Component } from 'react';
-import './ProjectsHome.css';
-import FindPI from '../Numbers/FindPI/FindPI';
-import FindE from '../Numbers/FindE/FindE';
-import Fibo from '../Numbers/Fibo/Fibo';
-import PrimeFact from '../Numbers/PrimeFact/PrimeFact';
-import NextPrime from '../Numbers/NextPrime/NextPrime';
-import TileCost from '../Numbers/TileCost/TileCost';
-import MortgageCalc from '../Numbers/MortgageCalc/MortgageCalc';
-import ChangeReturn from '../Numbers/ChangeReturn/ChangeReturn';
-import BinaryToDecimal from '../Numbers/BinaryToDecimal/BinaryToDecimal';
-import AlarmClock from '../Numbers/AlarmClock/AlarmClock';
-import CoinFlip from '../Numbers/CoinFlipSimulation/CoinFlipSimulation';
-import CreditCardValidator from '../Numbers/CreditCardValidator/CreditCardValidator';
-import HappyNumbers from '../Numbers/HappyNumbers/HappyNumbers'
-import DistanceBetweenCities from '../Numbers/DistanceBetweenCities/DistanceBetweenCities'
-import FactorialFinder from '../Numbers/FactorialFinder/FactorialFinder'
-import FastExponentiation from '../Numbers/FastExponentiation/FastExponentiation';
-import LimitCalculator from '../Numbers/LimitCalculator/LimitCalculator';
-import NumberNames from '../Numbers/NumberNames/NumberNames';
-import TaxCalculator from '../Numbers/TaxCalculator/TaxCalculator';
-import CollatzConjecture from '../Classic/CollatzConjecture/CollatzConjecture';
-import MergeSort from '../Classic/Sorting/MergeSort';
-import BubbleSort from '../Classic/Sorting/BubbleSort';
-import SieveofEratosthenes from '../Classic/SieveofEratosthenes/SieveofEratosthenes';
+import { Redirect } from 'react-router';
 
 class ProjectsHome extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      redirect: '',
+      redirectAbout: false,
+      redirectProfile: false,
+      redirectHome: false
     };
+    this.handleOnClick = this.handleOnClick.bind(this);
+    this.routeAbout = this.routeAbout.bind(this);
+    this.routeHome = this.routeHome.bind(this);
+  }
+
+  handleOnClick(event) {
+    const value = event;
+    this.setState({redirect: value});
+  }
+  routeAbout(event) {
+    this.setState({redirectAbout: true});
+  }
+  routeHome(event) {
+    this.setState({redirectHome: true});
   }
 
   render() {
+    if (this.state.redirect !== '') {
+      return <Redirect push to={'/projects/' + this.state.redirect} />;
+    }
+    if (this.state.redirectAbout) {
+      return <Redirect push to="/about" />;
+    }
+    if (this.state.redirectHome) {
+      return <Redirect push to="/" />;
+    }
     return (
-    <div className="projects-page">
-      <FindPI></FindPI>
-      <FindE></FindE>
-      <Fibo></Fibo>
-      <PrimeFact></PrimeFact>
-      <NextPrime></NextPrime>
-      <TileCost></TileCost>
-      <MortgageCalc></MortgageCalc>
-      <ChangeReturn></ChangeReturn>
-      <BinaryToDecimal></BinaryToDecimal>
-      <TaxCalculator></TaxCalculator>
-      <CoinFlip></CoinFlip>
-      <CreditCardValidator></CreditCardValidator>
-      <HappyNumbers></HappyNumbers>
-      <FactorialFinder></FactorialFinder>
-      <FastExponentiation></FastExponentiation>
-
-      <AlarmClock></AlarmClock>
-      <DistanceBetweenCities></DistanceBetweenCities>
-
-      <LimitCalculator></LimitCalculator>
-      <NumberNames></NumberNames>
-      
-      <CollatzConjecture></CollatzConjecture>
-      <MergeSort></MergeSort>
-      <BubbleSort></BubbleSort>
-      <SieveofEratosthenes></SieveofEratosthenes>
-    </div>
+      <div className="home">
+        <div className="home-topbar">
+          <div>
+            <button className="home-button" onClick={this.routeHome}>Joseph Sutorus</button>
+          </div>
+          <div>
+            <button className="home-button" onClick={this.routeAbout}>About</button>
+            <button className="home-button current-page">Projects</button>
+          </div>
+        </div>
+        <div className="projects-page">
+          <div className="projects-header">Projects</div>
+          <button className="project-button" onClick={() => this.handleOnClick('numbers')}>
+            <div className="project-button-inner"></div>
+            <div className="project-button-text">Numbers</div>
+          </button>
+          <button className="project-button" onClick={() => this.handleOnClick('calculator')}>
+            <div className="project-button-inner"></div>
+            <div className="project-button-text">Calculator</div>
+          </button>
+          <button className="project-button" onClick={() => this.handleOnClick('photos')}>
+            <div className="project-button-inner"></div>
+            <div className="project-button-text">Photos</div>
+          </button>
+          <button className="project-button" onClick={() => this.handleOnClick('nosedive')}>
+            <div className="project-button-inner"></div>
+            <div className="project-button-text">Nosedive</div>
+          </button>
+        </div>
+      </div>
     );
   }
 }

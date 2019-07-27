@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../FindPI/FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 /*
 Ask the user to enter 2 integers a and b and output a^b (i.e. pow(a,b))

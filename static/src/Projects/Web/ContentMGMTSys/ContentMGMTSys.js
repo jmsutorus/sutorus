@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../FindPI/FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 /*
 Create a content management system (CMS) like Joomla, Drupal, PHP Nuke etc. Start small.

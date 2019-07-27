@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../FindPI/FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 class PrimeFact extends Component {
 
@@ -29,11 +28,11 @@ class PrimeFact extends Component {
     //find divisors starting with 2
 
     for(let i = 2; i <= integer; i++){
-        if (integer % i==0) {
+        if (integer % i === 0) {
 
             //check if divisor is prime
             for(var j = 2; j <= i/2; j++) {
-                if(i % j == 0) {
+                if(i % j === 0) {
                     isPrime = false;
                 } else {
                     isPrime = true;
@@ -42,7 +41,7 @@ class PrimeFact extends Component {
 
             //if the divisor is prime
 
-            if (isPrime == true) {
+            if (isPrime === true) {
                 //divide integer by prime factor & factor store in array primeArray
                 integer /= i
                 primeArray.push(i);

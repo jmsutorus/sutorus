@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../../Numbers/FindPI/FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 /*
 The sieve of Eratosthenes is one of the most efficient ways to find all of the smaller primes (below 10 million or so).

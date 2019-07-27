@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../FindPI/FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 class ChangeReturn extends Component {
 
@@ -28,20 +27,20 @@ class ChangeReturn extends Component {
         console.log(difference);
         if (difference >= .25) {
             difference = (difference - .25).toFixed(2);
-            const increase = this.state.change.quarter++;
+            const increase = this.state.change.quarter + 1;
             this.setState({change: {...this.state.change, quarter: increase}});
         } else if (difference >= .10) {
             difference = (difference - .1).toFixed(2);
             console.log(difference);
-            const increase = this.state.change.dime++;
+            const increase = this.state.change.dime + 1;
             this.setState({change: {...this.state.change, dime: increase}});
         } else if (difference >= .05) {
             difference = (difference - .05).toFixed(2);
-            const increase = this.state.change.nickel++;
+            const increase = this.state.change.nickel + 1;
             this.setState({change: {...this.state.change, nickel: increase}});
         } else if (difference >= .01) {
             difference = (difference - .01).toFixed(2);
-            const increase = this.state.change.penny++;
+            const increase = this.state.change.penny + 1;
             this.setState({change: {...this.state.change, penny: increase}});
         }
       }

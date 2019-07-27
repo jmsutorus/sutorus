@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../FindPI/FindPI.css';
-import { NavLink } from 'react-router-dom';
 
 class HappyNumbers extends Component {
 
@@ -24,7 +23,7 @@ class HappyNumbers extends Component {
     let c = [];
     let m = 0;
     let n = 0;
-    while(num != 1 && c[num] !== true) 
+    while(num !== 1 && c[num] !== true) 
     {
         c[num] = true ;
         m = 0 ;
