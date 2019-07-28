@@ -3,6 +3,8 @@ import { Redirect } from 'react-router';
 import './Home.css';
 import david from './david.png';
 import sad from './sadboy.gif';
+import writing from './writing.gif';
+import family from './family.png';
 
 class Home extends Component {
 
@@ -68,12 +70,12 @@ class Home extends Component {
               <div className="box-text">Projects</div>
             </button>
             <button className="body-box">
-              <div className="box-image-wrapper"></div>
+              <div className="box-image-wrapper"><img className="sad-image" alt="" src={family}></img></div>
               <div className="box-text">Family</div>
             </button>
             <button className="body-box">
-              <div className="box-image-wrapper"></div>
-              <div className="box-text">About</div>
+              <div className="box-image-wrapper"><img className="writing-image" alt="" src={writing}></img></div>
+              <div className="box-text">&#60;Blog&#62;</div>
             </button>
           </div>
         </div>
