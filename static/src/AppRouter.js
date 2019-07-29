@@ -8,6 +8,8 @@ import Numbers from './Projects/Numbers/Numbers.js';
 import Nosedive from './Projects/Nosedive/Nosedive.js';
 import Home from './Home.js';
 import About from './About.js';
+import BlogHome from './Blog/BlogHome.js';
+import BlogPost from './Blog/BlogPost.js';
 
 class AppRouter extends Component {
 
@@ -18,6 +20,8 @@ class AppRouter extends Component {
                     <Route exact path='/' component={ Home } />
                     <Route exact path='/home' component={ Home } />
                     <Route exact path='/about' component={ About } />
+                    <Route exact path='/blog' component={ BlogHome } />
+                    <Route exact path='/blog/post:postName' component={ BlogPost } />
                     <Route exact path='/projects' component={ ProjectsHome } />
                     <Route exact path='/projects/calculator' component={ Calculator } />
                     <Route exact path='/projects/photos' component={ Photos } />

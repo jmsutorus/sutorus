@@ -1,0 +1,34 @@
+.blog-nav {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+    font-size: 17px;
+    height: 46px;
+    background: #fdf9f3;
+    background: var(--theme-top-bar-background, #fdf9f3);
+    position: fixed;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.nav-search-form {
+    width: calc(100% - 760px);
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    top: 8px;
+    bottom: 0;
+}
+.nav-search-form-input {
+    margin: 0;
+    width: calc(100% - 12px);
+    border-radius: 3px;
+    border: 0px;
+    padding: 6px 9px;
+    font-size: 0.9em;
+    background-color: rgb(232, 231, 231);
+    border-bottom-color: rgb(10, 10, 10);
+}
+.nav-search-form-input:focus {
+    outline: none;
+}

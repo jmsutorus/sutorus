@@ -3,7 +3,6 @@
     height: 100%;
 }
 .photos-topbar {
-    width: 100%;
     height: 64px;
     display: flex;
     flex-direction: row;
@@ -97,12 +96,9 @@
     padding-top: 24px;
     padding-left: 96px;
     padding-right: 96px;
-    padding-left: max(96px,env(safe-area-inset-left));
-    padding-right: max(96px,env(safe-area-inset-right));
     padding-bottom: env(safe-area-inset-bottom);
     display: block;
     overflow-y: auto;
-    /* padding: 24px; */
 }
 .photo-row {
     display: block;

@@ -15,12 +15,18 @@ class Home extends Component {
       index: 0,
       redirectAbout: false,
       redirectProfile: false,
-      redirectHome: false
+      redirectHome: false,
+      redirectBlog: false
     };
     this.handleOnClick = this.handleOnClick.bind(this);
     this.routeAbout = this.routeAbout.bind(this);
     this.routeProfile = this.routeProfile.bind(this);
     this.routeHome = this.routeHome.bind(this);
+    this.routeBlog = this.routeBlog.bind(this);
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0)
   }
 
   handleOnClick(event) {
@@ -36,6 +42,9 @@ class Home extends Component {
   routeHome(event) {
     this.setState({redirectHome: true});
   }
+  routeBlog(event) {
+    this.setState({redirectBlog: true});
+  }
 
   render() {
     if (this.state.redirectAbout) {
@@ -46,6 +55,9 @@ class Home extends Component {
     }
     if (this.state.redirectHome) {
       return <Redirect push to="/" />;
+    }
+    if (this.state.redirectBlog) {
+      return <Redirect push to="/blog" />;
     }
     return (
     <div className="home">
@@ -73,7 +85,7 @@ class Home extends Component {
               <div className="box-image-wrapper"><img className="sad-image" alt="" src={family}></img></div>
               <div className="box-text">Family</div>
             </button>
-            <button className="body-box">
+            <button className="body-box" onClick={this.routeBlog}>
               <div className="box-image-wrapper"><img className="writing-image" alt="" src={writing}></img></div>
               <div className="box-text">&#60;Blog&#62;</div>
             </button>

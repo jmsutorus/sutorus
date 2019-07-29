@@ -340,7 +340,7 @@ class Photos extends Component {
           <div>Selected</div>
         </div>
         <div className="trash-wrapper">
-          <button className="trash-button"><i class="fas fa-trash-alt"></i></button>
+          <button className="trash-button"><i className="fas fa-trash-alt"></i></button>
         </div>
         </div>
       );

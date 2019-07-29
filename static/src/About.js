@@ -15,6 +15,10 @@ class About extends Component {
       this.routeProfile = this.routeProfile.bind(this);
       this.routeHome = this.routeHome.bind(this);
     }
+
+    componentDidMount() {
+      window.scrollTo(0, 0)
+    }
   
     handleOnClick(event) {
       const value = event.target.value;

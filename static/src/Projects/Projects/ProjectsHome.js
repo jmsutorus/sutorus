@@ -16,6 +16,10 @@ class ProjectsHome extends Component {
     this.routeHome = this.routeHome.bind(this);
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   handleOnClick(event) {
     const value = event;
     this.setState({redirect: value});
