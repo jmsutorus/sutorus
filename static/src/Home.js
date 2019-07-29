@@ -81,14 +81,14 @@ class Home extends Component {
               <div className="box-image-wrapper"><img className="sad-image" alt="" src={sad}></img></div>
               <div className="box-text">Projects</div>
             </button>
-            <button className="body-box">
+            <a className="body-box" href="https://samsutorus.com/">
               <div className="box-image-wrapper"><img className="sad-image" alt="" src={family}></img></div>
               <div className="box-text">Family</div>
-            </button>
-            <button className="body-box" onClick={this.routeBlog}>
+            </a>
+            <a className="body-box" href='https://dev.to/joseph_sutorus'>
               <div className="box-image-wrapper"><img className="writing-image" alt="" src={writing}></img></div>
-              <div className="box-text">&#60;Blog&#62;</div>
-            </button>
+              <div className="box-text">&#60;Blog/&#62;</div>
+            </a>
           </div>
         </div>
     </div>
