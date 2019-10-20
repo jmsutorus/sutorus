@@ -70,6 +70,10 @@ class ProjectsHome extends Component {
             <div className="project-button-inner"></div>
             <div className="project-button-text">Nosedive</div>
           </button>
+          <button className="project-button" onClick={() => this.handleOnClick('todo')}>
+            <div className="project-button-inner"></div>
+            <div className="project-button-text">Todo</div>
+          </button>
         </div>
       </div>
     );
