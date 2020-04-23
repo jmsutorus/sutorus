@@ -33,15 +33,15 @@
     color: #EA6D60;
 }
 .body-text {
-    font-size: 7vw;
+    font-size: 6vw;
 }
 .body-box {
-    width: 38vw;
+    width: 27vw;
     min-width: 250px;
-    max-width: 450px;
-    height: 38vw;
+    max-width: 375px;
+    height: 27vw;
     min-height: 250px;
-    max-height: 450px;
+    max-height: 375px;
     margin-top: 12px;
     margin-left: 12px;
     margin-right: 12px;

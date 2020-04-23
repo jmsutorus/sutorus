@@ -1,0 +1,45 @@
+.player-top-nav {
+  grid-area: main-view;
+  height: 60px;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+  flex-direction: column;
+  min-height: 0;
+  display: flex;
+  position: sticky;
+  top: 0;
+
+  .top-nav-header {
+    opacity: 0;
+    background-color: rgb(18, 18, 18);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+    transition: background-color 0.25s;
+    pointer-events: none;
+
+    .nav-buttons-wrapper {
+      display: flex;
+
+      .nav-button {
+        margin-right: 16px;
+        cursor: not-allowed;
+        opacity: 0.6;
+        border: none;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        color: #fff;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+    }
+  }
+}

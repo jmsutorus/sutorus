@@ -18,16 +18,28 @@ class Nosedive extends Component {
 
   render() {
     return (
-      <div className="">
+      <div className="nosedive">
         <div className="topbar">
-          <div>Name Image</div>
-          <div>Search</div>
-          <div>User</div>
+          <div className="topbar-user-wrapper">
+            <img
+              className="nd-user-img"
+              alt="Joseph User Image"
+              src={JoeAndSam}
+            />
+          </div>
+          <div className="search-container">
+            <div className="photo-input-wrapper">
+              <div className="topbar-search-icon">
+                <i className="fas fa-search" />
+              </div>
+              <input className="seach-input" placeholder="search" />
+            </div>
+          </div>
         </div>
         <div className="nosedive-body">
           <div className="nosedive-profile">
             <div className="nosedive-menu-icon">
-              <i class="fas fa-bars fa-lg" />
+              <i class="far fa-edit fa-lg" />
             </div>
             <div className="nosedive-image-wrapper">
               <img className="nosedive-image" alt="" src={JoeAndSam} />
@@ -39,7 +51,7 @@ class Nosedive extends Component {
             <div className="nosedive-social-wrapper">
               <div className="nosedive-social-score">
                 <div className="nosedive-social-name">Score</div>
-                <div className="nosedive-score">8.0</div>
+                <div className="nosedive-score">4.0</div>
               </div>
               <div className="nosedive-social-score">
                 <div className="nosedive-social-name">Reviews</div>
@@ -48,13 +60,56 @@ class Nosedive extends Component {
             </div>
           </div>
           <div className="reviews">
-            <div className="single-review">single-review</div>
-          </div>
-          <div className="user-friends">
-            <div className="single-friend">single-friend</div>
+            <div className="single-review">
+              <div className="nd-user-id">
+                <img
+                  className="nd-user-img"
+                  alt="Joseph User Image"
+                  src={JoeAndSam}
+                />
+                <div className="nd-user-name-wrapper">
+                  <div className="nd-user-name">Joseph Sutorus</div>
+                  <a className="nd-user-name-id" href="/">
+                    @jmsutorus
+                  </a>
+                </div>
+              </div>
+              <div className="ng-user-review">4.3</div>
+            </div>
+            <div className="single-review">
+              <div className="nd-user-id">
+                <img
+                  className="nd-user-img"
+                  alt="Joseph User Image"
+                  src={JoeAndSam}
+                />
+                <div className="nd-user-name-wrapper">
+                  <div className="nd-user-name">Joseph Sutorus</div>
+                  <a className="nd-user-name-id" href="/">
+                    @jmsutorus
+                  </a>
+                </div>
+              </div>
+              <div className="ng-user-review">4.3</div>
+            </div>
+            <div className="single-review">
+              <div className="nd-user-id">
+                <img
+                  className="nd-user-img"
+                  alt="Joseph User Image"
+                  src={JoeAndSam}
+                />
+                <div className="nd-user-name-wrapper">
+                  <div className="nd-user-name">Joseph Sutorus</div>
+                  <a className="nd-user-name-id" href="/">
+                    @jmsutorus
+                  </a>
+                </div>
+              </div>
+              <div className="ng-user-review">4.3</div>
+            </div>
           </div>
         </div>
-        <div>Footer</div>
       </div>
     );
   }
